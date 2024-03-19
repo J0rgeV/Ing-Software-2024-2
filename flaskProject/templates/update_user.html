@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualizar cliente</title>
+</head>
+<script type="text/javascript">
+    function enviarMensaje() {
+        var opcion = document.getElementById('campo').value;
+        switch (opcion) {
+            case "":
+                document.getElementById('nuevoval').innerHTML = "";
+                break;
+            case "pass":
+                document.getElementById('nuevoval').innerHTML = "<label for='nuevoval'>Ingrese la nueva contraseña:</label> <input type='password' name='nuevoval' id='nuevoval'/>";
+                break;
+            case "email":
+                document.getElementById('nuevoval').innerHTML = "<label for='nuevoval'>Ingrese el nuevo correo:</label> <input type='email' name='nuevoval' id='nuevoval'/>";
+                break;
+            case "rol":
+                document.getElementById('nuevoval').innerHTML = "<label for='nuevoval'>Ingrese el nuevo rol:</label> <input type='number' min='0' max='1' name='nuevoval' id='nuevoval'/>";
+                break;
+            default:
+                document.getElementById('nuevoval').innerHTML = "<label for='nuevoval'>Ingrese el nuevo valor del campo:</label> <input type='text' name='nuevoval' id='nuevoval'/>";
+        }
+    }
+</script>
+<body>
+    <h1>Edita un cliente</h1>
+    <form method="post">
+    <label for="id">Ingrese el id del cliente:</label>
+    <input type="number" min="1" name="id" id="id"/>
+    <br>
+    <label for="campo">Ingrese el campo a actualizar:</label>
+    <select name="campo" id="campo" onchange="enviarMensaje()">
+        <option value="">...</option>
+        <option value="nombre">Nombre</option>
+        <option value="appat">Apellido Paterno</option>
+        <option value="apmat">Apellido Materno</option>
+        <option value="pass">Contraseña</option>
+        <option value="email">Email</option>
+        <option value="rol">Rol de usuario</option>
+    </select>
+    <br>
+    <div id="nuevoval"></div>
+    <br>
+    <button>Actualizar cliente</button>
+    </form>
+    {% if get_flashed_messages() %}
+        {% for message in get_flashed_messages() %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>

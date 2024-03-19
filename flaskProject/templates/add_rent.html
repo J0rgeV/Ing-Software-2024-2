@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar renta</title>
+</head>
+<body>
+    <h1>Agregar una renta</h1>
+    <form method="post">
+    <label for="usuario">Ingrese el id de usuario:</label>
+    <input type="text" name="usuario" id="usuario"/>
+    <br>
+    <label for="pelicula">Ingrese el id de la película:</label>
+    <input type="text" name="pelicula" id="pelicula"/>
+    <button>Agregar renta</button>
+    </form>
+    {% if get_flashed_messages() %}
+        {% for message in get_flashed_messages() %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Agregar alumno</title>
+    <title>Agregar cliente</title>
 </head>
 <body>
     <h1>Crear un alumno</h1>
@@ -16,12 +16,14 @@
     <label for="ap_mat">Ingrese el apellido materno:</label>
     <input type="text" name="ap_mat" id="ap_mat"/>
     <br>
-    <label for="num_cta">Ingrese el numero de cta:</label>
-    <input type="text" name="num_cta" id="num_cta" minlength="8" maxlength="8"/>
-    <br>
     <label for="passwd">Ingrese el password:</label>
     <input type="password" name="passwd" id="passwd"/>
     <br>
+    <label for="email">Ingrese el correo electrónico:</label>
+    <input type="email" name="email" id="email"/>
+    <br>
+    <label for="superusuario">Es superusuario?:</label>
+    <input min="0" max="1" name="superusuario" id="superusuario"/>
     <button>Crear alumno</button>
     </form>
     {% if get_flashed_messages() %}

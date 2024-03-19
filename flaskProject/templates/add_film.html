@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar película</title>
+</head>
+<body>
+    <h1>Agregar una película</h1>
+    <form method="post">
+    <label for="nombre">Ingrese el nombre:</label>
+    <input type="text" name="nombre" id="nombre"/>
+    <br>
+    <label for="genero">Ingrese el género:</label>
+    <input type="text" name="genero" id="genero"/>
+    <br>
+    <label for="duracion">Ingrese la duración (minutos):</label>
+    <input type="number" min="1" name="duracion" id="duracion"/>
+    <br>
+    <label for="inv">Ingrese el inventario:</label>
+    <input type="number" min="1" name="inv" id="inv"/>
+    <br>
+    <button>Agregar pelicula</button>
+    </form>
+    {% if get_flashed_messages() %}
+        {% for message in get_flashed_messages() %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>

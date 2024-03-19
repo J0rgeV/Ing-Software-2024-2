@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualiza película</title>
+</head>
+<script type="text/javascript">
+    function enviarMensaje() {
+        var opcion = document.getElementById('campo').value;
+        switch (opcion) {
+            case "":
+                document.getElementById('nuevoval').innerHTML = "";
+                break;
+            case "duracion":
+                document.getElementById('nuevoval').innerHTML = "<label for='nuevoval'>Ingrese la nueva duración (minutos):</label> <input type='number' min='1' name='nuevoval' id='nuevoval'/>";
+                break;
+            case "inv":
+                document.getElementById('nuevoval').innerHTML = "<label for='nuevoval'>Ingrese el nuevo inventario:</label> <input type='number' min='1' name='nuevoval' id='nuevoval'/>";
+                break;
+            default:
+                document.getElementById('nuevoval').innerHTML = "<label for='nuevoval'>Ingrese el nuevo valor del campo:</label> <input type='text' name='nuevoval' id='nuevoval'/>";
+        }
+    }
+</script>
+<body>
+    <h1>Edita una película</h1>
+    <form method="post">
+    <label for="id">Ingrese el id de la película:</label>
+    <input type="number" min="1" name="id" id="id"/>
+    <br>
+    <label for="campo">Ingrese el campo a actualizar:</label>
+    <select name="campo" id="campo" onchange="enviarMensaje()">
+        <option value="">...</option>
+        <option value="nombre">Nombre</option>
+        <option value="genero">Género</option>
+        <option value="duracion">Duración</option>
+        <option value="inv">Inventario</option>
+    </select>
+    <br>
+    <div id="nuevoval"></div>
+    <br>
+    <button>Actualizar película</button>
+    </form>
+    {% if get_flashed_messages() %}
+        {% for message in get_flashed_messages() %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualiza renta</title>
+</head>
+<body>
+    <h1>Edita una película</h1>
+    <form method="post">
+    <label for="id">Ingrese el id de la renta:</label>
+    <input type="number" min="1" name="id" id="id"/>
+    <br>
+    <label for="estatus">Ingrese el estatus a actualizar:</label>
+    <input type="number" min="0" max="1" name="estatus" id="estatus"/>
+    <br>
+    <br>
+    <button>Actualizar estatus de renta</button>
+    </form>
+    {% if get_flashed_messages() %}
+        {% for message in get_flashed_messages() %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
