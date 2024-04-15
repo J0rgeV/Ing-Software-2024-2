@@ -1,0 +1,32 @@
+.nuevo-renta__controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.nuevo-renta__control label {
+    font-weight: 50%;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.nuevo-renta__control input {
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 20rem;
+    max-width: 100%;
+}
+
+.nuevo-renta__actions {
+    text-align: right;
+}
+
+.renta {
+    align-items: center;
+    font-size: larger;
+    font-weight: bold;
+}

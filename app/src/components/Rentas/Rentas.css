@@ -1,0 +1,46 @@
+.rentas {
+    padding: 1rem;
+    background-color: goldenrod;
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+}
+
+.nuevo-renta {
+    background-color: #D27DF7;
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.nuevo-renta button {
+    font: inherit;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: 1px solid #9205CF;
+    background-color: #9205CF;
+    color: white;
+    border-radius: 12px;
+    margin-right: 1rem;
+}
+
+.nuevo-renta button:hover,
+.nuevo-renta button:active {
+    background-color: #AC1AEB;
+    border-color: #AC1AEB;
+}
+
+.nuevo-renta button.alternative {
+    color: white;
+    border-color: transparent;
+    border-color: transparent;
+}
+
+.nuevo-renta button.alternative:hover,
+.nuevo-renta button.alternative:active {
+    background-color: #D27DF7;
+}

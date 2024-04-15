@@ -1,0 +1,46 @@
+.peliculas {
+    padding: 1rem;
+    background-color: goldenrod;
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+}
+
+.nuevo-pelicula {
+    background-color: #61F387;
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.nuevo-pelicula button {
+    font: inherit;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: 1px solid #03B932;
+    background-color: #03B932;
+    color: white;
+    border-radius: 12px;
+    margin-right: 1rem;
+}
+
+.nuevo-pelicula button:hover,
+.nuevo-pelicula button:active {
+    background-color: #0BE544;
+    border-color: #0BE544;
+}
+
+.nuevo-pelicula button.alternative {
+    color: white;
+    border-color: transparent;
+    border-color: transparent;
+}
+
+.nuevo-pelicula button.alternative:hover,
+.nuevo-pelicula button.alternative:active {
+    background-color: #61F387;
+}

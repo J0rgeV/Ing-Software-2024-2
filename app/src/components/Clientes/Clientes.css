@@ -1,0 +1,46 @@
+.clientes {
+    padding: 1rem;
+    background-color: goldenrod;
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+}
+
+.nuevo-cliente {
+    background-color: #FA9983;
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.nuevo-cliente button {
+    font: inherit;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: 1px solid #CB2702;
+    background-color: #CB2702;
+    color: white;
+    border-radius: 12px;
+    margin-right: 1rem;
+}
+
+.nuevo-cliente button:hover,
+.nuevo-cliente button:active {
+    background-color: #E25333;
+    border-color: #E25333;
+}
+
+.nuevo-cliente button.alternative {
+    color: white;
+    border-color: transparent;
+    border-color: transparent;
+}
+
+.nuevo-cliente button.alternative:hover,
+.nuevo-cliente button.alternative:active {
+    background-color: #FA9983;
+}
